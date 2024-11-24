@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let asking = true;
+        let answers = ["It is certain", "Most likely", "Yes", "Reply hazy, try again", "Ask again later", "My reply is no", "My sources say no", "Very doubtful"];
+        while(asking == true){
+            prompt('I give wisdom in the form of yes or no. Ask any questions may you posses.');
+            let rand = Math.floor(Math.random() * 8);
+            alert(`${answers[rand]}`);
+            playAgain = prompt('Ask another quesiton (y/n)?');
+            playAgain.toLowerCase() == 'n' ? asking = false : asking = true;
+            if(asking == false){
+                alert('You have done well to seek my wisdom, may your endeavours be blessed.')
+                console.log('Player is finished asking for wisdom')
+            } else{
+                console.log('Player is playing again')
+            }
+        }
+    </script>
+</body>
+</html>
